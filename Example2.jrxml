@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Example2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a799b1cb-30a7-4e5a-909a-dbe5f6474ee0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sogis-dev"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * from av_avdpool_ng.gemeindegrenzen_gemeinde]]>
+	</queryString>
+	<field name="t_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="t_id"/>
+	</field>
+	<field name="t_basket" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="t_basket"/>
+	</field>
+	<field name="t_datasetname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="t_datasetname"/>
+	</field>
+	<field name="t_ili_tid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="t_ili_tid"/>
+	</field>
+	<field name="aname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="aname"/>
+	</field>
+	<field name="bfsnr" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="bfsnr"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="417" height="30" uuid="3c9844c1-6fff-42d4-a311-eb861e0eb9e7"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["T I T E L"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="12" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="10" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="beb6e4c7-a98c-4a9c-8377-0967af4526a6"/>
+				<textFieldExpression><![CDATA[$F{aname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="30" uuid="72556d27-bbe7-449f-851c-6e1237a7ab09"/>
+				<textFieldExpression><![CDATA[$F{bfsnr}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="11" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="11" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="10" splitType="Stretch"/>
+	</summary>
+</jasperReport>
